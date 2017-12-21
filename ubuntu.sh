@@ -23,6 +23,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
     wget https://github.com/PATRIC3/PATRIC-distribution/releases/download/1.018/patric-cli-1.018.deb
     sudo gdebi -n patric-cli-1.018.deb
+    cpanm install Class::Accessor
 
 #    sudo dpkg -i patric-cli-1.018.deb
 #    sudo apt-get install -f
