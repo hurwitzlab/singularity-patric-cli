@@ -5,7 +5,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 %environment
 
 %runscript
-    exec echo "Run singularity [image] exec p3-* to use..."
+    exec echo -e "singularity [image] exec p3-* or rast-* to use... \n singularity [image] exec ls /usr/bin for list of programs"
 
 %post
     echo "Hello from inside the container"
@@ -24,6 +24,8 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     wget https://github.com/PATRIC3/PATRIC-distribution/releases/download/1.018/patric-cli-1.018.deb
     sudo gdebi -n patric-cli-1.018.deb
     cpanm install Class::Accessor
+    git clone https://github.com/SEEDtk/RASTtk.git
+    cp -r -n RASTtk/lib/* /usr/share/patric-cli/deployment/lib/
 
 #    sudo dpkg -i patric-cli-1.018.deb
 #    sudo apt-get install -f
