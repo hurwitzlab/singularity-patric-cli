@@ -14,12 +14,10 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt-get upgrade
 
     #essential stuff
-    apt -y --force-yes install git sudo man vim build-essential wget unzip perl curl gdebi-core
+    apt -y install git sudo man vim build-essential wget unzip perl curl gdebi-core cpanminus
 
     mkdir /apps
     cd /apps
-    curl -L https://cpanmin.us | perl - App::cpanminus
-    cpanm --self-upgrade --sudo
 
     wget https://github.com/PATRIC3/PATRIC-distribution/releases/download/1.018/patric-cli-1.018.deb
     sudo gdebi -n patric-cli-1.018.deb
