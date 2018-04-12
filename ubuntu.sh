@@ -32,14 +32,15 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
     DEFAULTBIN="/usr/local/bin"
 
+    #cant use these anymore for hpc
     #create a directory to work in (that is, input data)
-    mkdir /work
+#    mkdir /work
 
     #mount dir for databases etc.
-    mkdir /db
+#    mkdir /db
 
     #mount dir for output writing
-    mkdir /out
+#    mkdir /out
 
     #so we dont get those stupid perl warnings
     locale-gen en_US.UTF-8
@@ -47,4 +48,12 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     #so we dont get those stupid warning on hpc/pbs
     mkdir /extra
     mkdir /xdisk
+    mkdir /rsgrps
+    
+    #
+    # Mount points for TACC directories
+    #
+    mkdir /home1
+    mkdir /scratch
+    mkdir /work
 
